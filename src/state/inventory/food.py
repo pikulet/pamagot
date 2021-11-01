@@ -1,4 +1,4 @@
-from interfaces import Item
+from inventory import Item
 from pet import Pet
 
 class Food(Item):
@@ -8,7 +8,7 @@ class Food(Item):
         self.calories = calories
 
     def interact_with(self, p: Pet):
-        p.weight += calories
+        p.weight += self.calories
 
 class Meal(Food):
 
@@ -17,8 +17,7 @@ class Meal(Food):
 
     def interact_with(self, p: Pet):
         Food.interact_with(p)
-        p.hungry.change(1)
-
+        p.hungry += 1
 
 class Snack(Food):
 
@@ -27,4 +26,4 @@ class Snack(Food):
 
     def interact_with(self, p: Pet):
         Food.interact_with(p)
-        p.happy.change(1)
+        p.happy += 1
