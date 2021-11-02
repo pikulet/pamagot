@@ -20,6 +20,8 @@ class Pet:
         self.intelligence = 0
         self.artistic = 0
         self.social = 0
+        self.school = None
+        self.job = None
 
     @property
     def generation(self):
@@ -92,3 +94,19 @@ class Pet:
     @social.setter
     def social(self, social):
         self.social = social
+
+    @property
+    def school(self):
+        return self.school
+
+    @school.setter
+    def school(self, school):
+        self.school = school
+        
+    @property
+    def job(self):
+        return self.job
+
+    @job.setter
+    def job(self, job):
+        self.job = job
