@@ -17,7 +17,7 @@ class Item:
 class Inventory:
 
     def __init__(self):
-        self.items: list[Item]
+        self.items = []
 
     @property
     def items(self):
@@ -26,7 +26,7 @@ class Inventory:
     def add_item(self, item):
         self.items.append(item)
 
-    def use_item(self, index) -> Item:
+    def use_item(self, index):
         return self.items.pop(index)
 
     def drop_item(self, index):

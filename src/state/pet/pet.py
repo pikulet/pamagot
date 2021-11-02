@@ -1,17 +1,15 @@
 import random
-from enum import Enum
-
-class Gender(Enum):
-    Boy = 1
-    Girl = 2
 
 class Pet:
 
-    def __init__(self, name, generation=1, gender=random.choice(list(Gender))):
-        NamedEntity.__init__()
+    def __init__(self, name, generation=1, species, x_species, y_species):
+        # evolution
         self.__generation = generation
-        self.__gender = random.choice(list(Gender))
-        self.name = name
+        self.__x_species = x_species
+        self.__y_species = y_species
+        self.species = species
+
+        self.__name = name
         self.age = 0
         self.weight = 0
         self.happy = ProgressBarInt(4)
@@ -25,11 +23,27 @@ class Pet:
 
     @property
     def generation(self):
-        return self.generation
+        return self.__generation
 
     @property
-    def gender(self):
-        return self.gender
+    def x_species(self):
+        return self.__x_species
+
+    @property
+    def y_species(self):
+        return self.__y_species
+
+    @property
+    def species(self):
+        return self.species
+
+    @species.setter
+    def species(self, species):
+        self.species = species
+
+    @property
+    def name(self):
+        return self.__name
 
     @property
     def age(self):
