@@ -1,22 +1,7 @@
 # pamagot
 python remake of nostalgic tamagotchi (v4 connection)
 
+Game engine written from scratch. With reference to the wiki for [mechanics](https://tamagotchi.fandom.com/wiki/Tamagotchi_Connection_Version_4) and [evolution](https://tamagotchi.fandom.com/wiki/Tamagotchi_Connection_Version_4/Character_list)
 
-classes need:
-console -> the screen
-buttons 
-engine -> running everything, most importantly the game time mechanism that triggers pet events
-engine.click(buttons)
-
-
-pet -> hungry, happy, training, weight, age, gender, generation, name, intelligence, artistic, social
-
-food -> meal, snack.
-pet.eat(food)
-meals add 1 hungry, 1 kg
-snack adds 1 happy, 2 kg
-items -> ball, spade, lamp, plant, basically toys
-shop
-game
-console
+UI written in Pyxel.
 
