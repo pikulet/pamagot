@@ -14,6 +14,7 @@ class Pet:
         self.weight = 0
         self.happy = ProgressBarInt(4)
         self.hungry = ProgressBarInt(4)
+        self.clean = ProgressBarInt(4)
         self.training = ProgressBarInt(10)
         self.intelligence = 0
         self.artistic = 0

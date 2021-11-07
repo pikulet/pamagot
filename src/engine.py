@@ -1,16 +1,31 @@
+from enum import Enum
+from bitarray import bitarray
+import views
+
+class Buttons(Enum):
+    RESET = 0
+    A = 1
+    B = 2
+    C = 3
+
 class PamagotEngine:
 
     def __init__(self):
-        self.current_view
-        self.pet
-        self.points
-        self.inventory
+        self.view = views.Room
+        self.state = PamagotState()
+        self.multi_mode = True
+        self.pressed = bitarray(3)
 
     def press_btn_A(self):
-        return self.current_view.press_btn_A()
+        self.pressed[Buttons.A] = 1
 
     def press_btn_B(self):
-        return self.current_view.press_btn_B()
+        self.pressed[Buttons.B] = 1
 
     def press_btn_C(self):
-        return self.current_view.press_btn_C()
+        self.pressed[Buttons.C] = 1
+
+    def update(self):
+        # 1 game tick = 3 frames
+        pass
+        
