@@ -1,12 +1,4 @@
-from enum import Enum
-from bitarray import bitarray
 import views
-
-class Buttons(Enum):
-    RESET = 0
-    A = 1
-    B = 2
-    C = 3
 
 class PamagotEngine:
 
