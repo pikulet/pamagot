@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from src.state.pet import Pet
+from state.pet import Pet
 
 class Item:
 

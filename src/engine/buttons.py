@@ -1,0 +1,3 @@
+BUTTON_A = 0
+BUTTON_B = 1
+BUTTON_C = 2

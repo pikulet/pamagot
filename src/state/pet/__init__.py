@@ -2,14 +2,14 @@ import random
 
 class Pet:
 
-    def __init__(self, name, generation=1, species, x_species, y_species):
+    def __init__(self, species, x_species, y_species, generation=1):
         # evolution
         self.__generation = generation
         self.__x_species = x_species
         self.__y_species = y_species
         self.species = species
 
-        self.__name = name
+        self.name = None
         self.age = 0
         self.weight = 0
         self.happy = ProgressBarInt(4)
@@ -44,7 +44,12 @@ class Pet:
 
     @property
     def name(self):
-        return self.__name
+        return self.name
+
+    @name.setter
+    def name(self, name):
+        if self.name is None:
+            self.name = name
 
     @property
     def age(self):

@@ -1,3 +1,7 @@
+from state.pet import Pet
+from state.inventory import Inventory
+from state.friend_list import FriendList
+
 class PamagotState:
 
     def __init__(self):
