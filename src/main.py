@@ -1,7 +1,7 @@
 import logging
 import argparse
 
-from engine.interface import Pamagot
+from pamagot import Pamagot
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

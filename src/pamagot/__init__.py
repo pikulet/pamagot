@@ -1,8 +1,8 @@
 import logging
 import pyxel
 
-from engine.engine import PamagotEngine
-from engine.buttons import *
+from pamagot.engine import PamagotEngine
+from pamagot.buttons import *
 
 BUTTON_MAPPINGS = {
     pyxel.KEY_LEFT: BUTTON_A,
@@ -15,7 +15,7 @@ class Pamagot:
     def __init__(self):
         logging.info("Welcome to Pamagotchii :]")
         self.engine = PamagotEngine()
-        pyxel.init(40, 40, caption="Pamagotchii")
+        pyxel.init(50, 50, caption="Pamagotchii", palette=[0x000000, 0x1D2B53, 0x7E2553, 0x008751, 0xAB5236, 0x5F574F, 0xC2C3C7, 0xFFF1E8, 0xFF004D, 0xFFA300, 0xFFEC27, 0x00E436, 0x29ADFF, 0x83769C, 0xFF77A8, 0xFFCCAA])
         pyxel.run(self.update, self.draw)
 
     def update(self):
